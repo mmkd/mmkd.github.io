@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="K">
     <meta name="description" itemprop="description" content="年轻人的第一个博客">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",JavaScript">
 
     <!-- Site Verification -->
     
@@ -68,11 +68,11 @@
     <meta property="og:title" content="第二篇 | 木木口丁的博客啊">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="年轻人的第一个博客">
-    
+    <meta property="og:article:tag" content="JavaScript"> 
 
     
         <meta property="article:published_time" content="Sun Aug 13 2017 19:08:01 GMT+0800" />
-        <meta property="article:modified_time" content="Mon Aug 14 2017 19:44:37 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Aug 14 2017 23:40:54 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -108,12 +108,12 @@
             "@type": "ImageObject",
             "url": "/img/favicon.png"
         },
-        "description": "你好啊"
+        "description": "你好啊~"
     },
     "headline": "第二篇",
     "url": "http://yoursite.com/2017/08/13/第二篇/index.html",
     "datePublished": "Sun Aug 13 2017 19:08:01 GMT+0800",
-    "dateModified": "Mon Aug 14 2017 19:44:37 GMT+0800",
+    "dateModified": "Mon Aug 14 2017 23:40:54 GMT+0800",
     "description": "年轻人的第一个博客",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -239,12 +239,12 @@
 <!-- Theme Background Related-->
 
     <style>
-      body{
-        background-color: #F5F5F5;
+      body {
+        background-color: ;
       }
 
       /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
         background-color: #fff;
       }
     </style>
@@ -287,7 +287,9 @@
 
     <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism-duotone-sea.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><script src="/js/prism.js"></script>
+<script src="/js/prism-line-numbers.min.js"></script></head>
 
 
     
@@ -407,6 +409,17 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACc0lEQVR42u3bUVLDMAwE0N7/0nAASFhJths6L19M2zR+/rDNSn19ffT1wsPDw8PDw8PDexjvFV9Xn//lARev/3z3/tuqY8PDw8M7yftjqb0Y0OTzCbI6Njw8PLzzvPwx93dd3ZsMd8HY8PDw8B7GSzaGZFLuj854eHh4n8RbNfT7MeDh4eH9F16+xF8Bktd7R+pDWQseHh5ezKsWwE7+/Yb6Hh4eHt4tr7dY58fuvKw130jw8PDwzvDuI9pJsJvje0FwuekKDw8PbxHv/pHVhtRqUFseejXGxcPDw9vAqxacqkPPm64mPy3Aw8PDO8/LF/rqcEeH41bzKx4eHt5uXu9gnbPz9qy8ANYMI/Dw8PAW8fJwtlr0yqejOk1/bGZ4eHh4m3n5oTZfspONJ9+cqs0EeHh4eLt51eL9JMi4B0wKb3h4eHgneXlg2iuJVRf9eRkMDw8PbzevEI/Gr0x+DJCHtoUYFw8PD28pL1+OJ8WqeURbKLDh4eHhbeb1toEerBf15iPEw8PDO8ObRA9zUjWuHWUteHh4eIt4vSaAHLyqMasQcODh4eFt5k0i3WqEUY1xm0dtPDw8vCO8/F/9fCKqbQH5AbqZUuPh4eEt4uXhbDWG6B2y82aCQhiBh4eHt5RXvfKoIj8Wrwpw8fDw8M7wqstxrzEr/868uWqUUuPh4eGNeflm0Ct99SauWgzDw8PDO88rlOfjtoDX0iuaCDw8PLyH8fLQttdGUA1EFm8MeHh4eJt5vYghCX+r9+Lh4eG9i5cXvVa1T03aC7bEuHh4eHgHC2D5cbl3WB9tDHh4eHhLeZ934eHh4eHh4eHhPeD6Bq4C2YX+OAz9AAAAAElFTkSuQmCC">
+    
+</ul>
+    
 
     <!-- Tags (bookmark) -->
     
@@ -416,7 +429,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        
+        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a>
     </ul>
     
 
@@ -501,12 +514,17 @@
 <li>构造函数：比如Date()、RegExp()、String()、Object()和Array()</li>
 <li>全局对象，比如Math和JSON</li>
 </ul>
-<h4 id="全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。"><a href="#全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。" class="headerlink" title="全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。"></a>全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。</h4><p><strong>在代码的最顶层——不在任何函数内的JavaScript代码——可以使用JavaScript关键字this来引用全局对象：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var global = this; //定义一个引用全局对象的全局变量。</div></pre></td></tr></table></figure></p>
-<p><strong>浏览器窗口中所有JavaScript代码中，Window对象充当了全局对象，其有一个属性window引用其自身。如果代码声明了一个全局变量，这个全局变量就是全局对象的一个属性。</strong></p>
-<h3 id="包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）"><a href="#包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）" class="headerlink" title="包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）"></a>包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;Hello World!&quot;;</div><div class="line">var word = str.substring(str.indexOf(&quot;&quot;)+1,str.length); //使用字符串的属性</div></pre></td></tr></table></figure>
-<p><strong>字符串不是对象，为什么它会有属性呢？原因：只要引用了字符串的属性，JavaScript就会将字符串值通过调用new String()的方式转换成对象，这个对象继承了字符串的方法，并被用来处理属性的引用。一旦引用结束，这个新创建的对象就会被销毁（其实实现上并不一定创建或销毁这个临时对象，然而整个过程看起来是这样）。<br>同字符串一样，数字和布尔值也具有各自的方法：（通过Number()和Boolean()构造函数创建一个临时对象）这些方法的调用均是来自于这个临时对象。null和undefined没有包装对象：访问它们的属性会造成类型错误。</strong></p>
-<p><strong><em>Example：</em></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var s = &quot;test&quot;;</div><div class="line">s.len = 4;</div><div class="line">var t = s.len; //查询属性</div></pre></td></tr></table></figure></p>
-<p>当运行这段代码时，t的值是undefined。第二行代码创建一个临时字符串对象，并给其len属性赋值为4，随即销毁这个对象，尝试读取其len属性，这个属性自然不存在，表达式求值结果为undefined。这段代码说明在读取字符串、数字和布尔值的属性（或方法）的时候，表现的像对象一样，但试图给其属性赋值，则会忽略这个操作：修改的只是发生在临时对象身上，而这个临时对象并未继续保留下来。<br><strong>通常，包装对象只是被看作一种实现细节，而不用特别关注。<br>字符串、数字和布尔值的属性都是只读的，并且不能给它们定义新属性。这是有别于对象的。<br>JavaScript会在必要时将包装对象转换成原始值，“==”运算符将原始值视为相等，但“===”运算符将它们视为不等。通过typeof运算符可以看到原始值和包装对象的不同。</strong></p>
+<h4 id="全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。"><a href="#全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。" class="headerlink" title="全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。"></a>全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。</h4><p><strong>在代码的最顶层——不在任何函数内的JavaScript代码——可以使用JavaScript关键字this来引用全局对象：</strong></p>
+<pre><code>var global = this; //定义一个引用全局对象的全局变量。
+</code></pre><p><strong>浏览器窗口中所有JavaScript代码中，Window对象充当了全局对象，其有一个属性window引用其自身。如果代码声明了一个全局变量，这个全局变量就是全局对象的一个属性。</strong></p>
+<h3 id="包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）"><a href="#包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）" class="headerlink" title="包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）"></a>包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）</h3><pre><code>var str = &quot;Hello World!&quot;;
+var word = str.substring(str.indexOf(&quot;&quot;)+1,str.length); //使用字符串的属性
+</code></pre><p><strong>字符串不是对象，为什么它会有属性呢？原因：只要引用了字符串的属性，JavaScript就会将字符串值通过调用new String()的方式转换成对象，这个对象继承了字符串的方法，并被用来处理属性的引用。一旦引用结束，这个新创建的对象就会被销毁（其实实现上并不一定创建或销毁这个临时对象，然而整个过程看起来是这样）。<br>同字符串一样，数字和布尔值也具有各自的方法：（通过Number()和Boolean()构造函数创建一个临时对象）这些方法的调用均是来自于这个临时对象。null和undefined没有包装对象：访问它们的属性会造成类型错误。</strong></p>
+<p><strong><em>Example：</em></strong></p>
+<pre><code>var s = &quot;test&quot;;
+s.len = 4;
+var t = s.len; //查询属性
+</code></pre><p>当运行这段代码时，t的值是undefined。第二行代码创建一个临时字符串对象，并给其len属性赋值为4，随即销毁这个对象，尝试读取其len属性，这个属性自然不存在，表达式求值结果为undefined。这段代码说明在读取字符串、数字和布尔值的属性（或方法）的时候，表现的像对象一样，但试图给其属性赋值，则会忽略这个操作：修改的只是发生在临时对象身上，而这个临时对象并未继续保留下来。<br><strong>通常，包装对象只是被看作一种实现细节，而不用特别关注。<br>字符串、数字和布尔值的属性都是只读的，并且不能给它们定义新属性。这是有别于对象的。<br>JavaScript会在必要时将包装对象转换成原始值，“==”运算符将原始值视为相等，但“===”运算符将它们视为不等。通过typeof运算符可以看到原始值和包装对象的不同。</strong></p>
 
     
 
@@ -644,7 +662,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Something/">Something<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -792,7 +810,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
         <!--Copyright-->
         <div id="copyright">
-            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>木木口丁的博客啊
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>木木口丁的博客啊
         </div>
 
         <!-- Paradox Footer Right Section -->
@@ -899,6 +917,12 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 <!-- Bing Background -->
+
+<script type="text/ls-javascript" id="Bing-Background-script">
+    queue.offer(function(){
+        $('body').attr('data-original', 'https://api.i-meto.com/bing?');
+    });
+</script>
 
 
 <script>
