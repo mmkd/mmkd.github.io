@@ -61,15 +61,15 @@
   
     
     <entry>
-      <title><![CDATA[关于我]]></title>
-      <url>/about/index.html</url>
-      <content type="html"><![CDATA[<h1 id="木木口丁啊～"><a href="#木木口丁啊～" class="headerlink" title="木木口丁啊～"></a>木木口丁啊～</h1>]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[映像]]></title>
       <url>/gallery/index.html</url>
       <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[关于我]]></title>
+      <url>/about/index.html</url>
+      <content type="html"><![CDATA[<h1 id="木木口丁啊～"><a href="#木木口丁啊～" class="headerlink" title="木木口丁啊～"></a>木木口丁啊～</h1>]]></content>
     </entry>
     
     <entry>
