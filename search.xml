@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[第二篇]]></title>
+      <url>/2017/08/13/%E7%AC%AC%E4%BA%8C%E7%AF%87/</url>
+      <content type="html"><![CDATA[<h3 id="全局对象的属性是全局定义的符号，JavaScript程序可以直接使用。当JavaScript解释器启动时（或者任何Web浏览器加载新页面的时候），它将创建一个新的全局对像，并给它一组定义的初始属性："><a href="#全局对象的属性是全局定义的符号，JavaScript程序可以直接使用。当JavaScript解释器启动时（或者任何Web浏览器加载新页面的时候），它将创建一个新的全局对像，并给它一组定义的初始属性：" class="headerlink" title="全局对象的属性是全局定义的符号，JavaScript程序可以直接使用。当JavaScript解释器启动时（或者任何Web浏览器加载新页面的时候），它将创建一个新的全局对像，并给它一组定义的初始属性："></a>全局对象的属性是全局定义的符号，JavaScript程序可以直接使用。当JavaScript解释器启动时（或者任何Web浏览器加载新页面的时候），它将创建一个新的全局对像，并给它一组定义的初始属性：</h3><ul>
+<li>全局属性：比如undefined、Infinity、NaN。</li>
+<li>全局函数：比如isNaN()、parseInt()和eval()</li>
+<li>构造函数：比如Date()、RegExp()、String()、Object()和Array()</li>
+<li>全局对象，比如Math和JSON</li>
+</ul>
+<h4 id="全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。"><a href="#全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。" class="headerlink" title="全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。"></a>全局对象的初始属性并不是保留字，但它们应该当作保留字来对待。</h4><p><strong>在代码的最顶层——不在任何函数内的JavaScript代码——可以使用JavaScript关键字this来引用全局对象：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var global = this; //定义一个引用全局对象的全局变量。</div></pre></td></tr></table></figure></p>
+<p><strong>浏览器窗口中所有JavaScript代码中，Window对象充当了全局对象，其有一个属性window引用其自身。如果代码声明了一个全局变量，这个全局变量就是全局对象的一个属性。</strong></p>
+<h3 id="包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）"><a href="#包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）" class="headerlink" title="包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）"></a>包装对象（存取字符串、数字和布尔值的属性时创建的临时对象）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;Hello World!&quot;;</div><div class="line">var word = str.substring(str.indexOf(&quot;&quot;)+1,str.length); //使用字符串的属性</div></pre></td></tr></table></figure>
+<p><strong>字符串不是对象，为什么它会有属性呢？原因：只要引用了字符串的属性，JavaScript就会将字符串值通过调用new String()的方式转换成对象，这个对象继承了字符串的方法，并被用来处理属性的引用。一旦引用结束，这个新创建的对象就会被销毁（其实实现上并不一定创建或销毁这个临时对象，然而整个过程看起来是这样）。<br>同字符串一样，数字和布尔值也具有各自的方法：（通过Number()和Boolean()构造函数创建一个临时对象）这些方法的调用均是来自于这个临时对象。null和undefined没有包装对象：访问它们的属性会造成类型错误。</strong></p>
+<p><strong><em>Example：</em></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var s = &quot;test&quot;;</div><div class="line">s.len = 4;</div><div class="line">var t = s.len; //查询属性</div></pre></td></tr></table></figure></p>
+<p>当运行这段代码时，t的值是undefined。第二行代码创建一个临时字符串对象，并给其len属性赋值为4，随即销毁这个对象，尝试读取其len属性，这个属性自然不存在，表达式求值结果为undefined。这段代码说明在读取字符串、数字和布尔值的属性（或方法）的时候，表现的像对象一样，但试图给其属性赋值，则会忽略这个操作：修改的只是发生在临时对象身上，而这个临时对象并未继续保留下来。<br><strong>通常，包装对象只是被看作一种实现细节，而不用特别关注。<br>字符串、数字和布尔值的属性都是只读的，并且不能给它们定义新属性。这是有别于对象的。<br>JavaScript会在必要时将包装对象转换成原始值，“==”运算符将原始值视为相等，但“===”运算符将它们视为不等。通过typeof运算符可以看到原始值和包装对象的不同。</strong></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Web </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[年轻人的第一篇博文]]></title>
+      <url>/2017/08/13/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Something </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+  
+  
+    
+    <entry>
+      <title><![CDATA[关于我]]></title>
+      <url>/about/index.html</url>
+      <content type="html"><![CDATA[<h1 id="木木口丁啊～"><a href="#木木口丁啊～" class="headerlink" title="木木口丁啊～"></a>木木口丁啊～</h1>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[映像]]></title>
+      <url>/gallery/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[标签云]]></title>
+      <url>/tags/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[timeline]]></title>
+      <url>/timeline/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+  
+</search>
