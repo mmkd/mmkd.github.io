@@ -12,7 +12,7 @@
     
     <title>
         
-            归档: 2017/8 | 
+            在Windows上安装Shadowsocks服务器 | 
         
         木木口丁的博客啊
     </title>
@@ -67,15 +67,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017/8 | 木木口丁的博客啊">
+    <meta property="og:title" content="在Windows上安装Shadowsocks服务器 | 木木口丁的博客啊">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="年轻人的第一个博客">
     
 
     
+        <meta property="article:published_time" content="Tue Sep 12 2017 23:03:09 GMT+0800" />
+        <meta property="article:modified_time" content="Tue Jan 09 2018 23:19:05 GMT+0800" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="归档: 2017/8 | 木木口丁的博客啊">
+    <meta name="twitter:title" content="在Windows上安装Shadowsocks服务器 | 木木口丁的博客啊">
     <meta name="twitter:description" content="年轻人的第一个博客">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -83,13 +86,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2017/08/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/09/12/在Windows上安装Shadowsocks服务器/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "木木口丁的博客啊",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "K",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "深自缄默，如云漂泊"
+    },
+    "headline": "在Windows上安装Shadowsocks服务器",
+    "url": "http://yoursite.com/2017/09/12/在Windows上安装Shadowsocks服务器/index.html",
+    "datePublished": "Tue Sep 12 2017 23:03:09 GMT+0800",
+    "dateModified": "Tue Jan 09 2018 23:19:05 GMT+0800",
+    "description": "年轻人的第一个博客",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com"
+    }
+}
+</script>
 
 
     
@@ -278,155 +311,279 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-下载并安装适用于Windows的Python，您可以在64位Windows中下载x86-64-MSI安装程序。"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 下载并安装适用于Windows的Python，您可以在64位Windows中下载x86-64 MSI安装程序。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-在安装过程中应该安装-pip"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 在安装过程中应该安装 pip</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-安装Windows的OpenSSL。如果你安装64位Python，你应该安装64位OpenSSL。"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 安装Windows的OpenSSL。如果你安装64位Python，你应该安装64位OpenSSL。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注："><span class="post-toc-number">3.1.</span> <span class="post-toc-text">注：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-接下来就是像使用Linux一样安装Shadowsocks服务端啦！使用这段命令："><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 接下来就是像使用Linux一样安装Shadowsocks服务端啦！使用这段命令：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-如果要使用salsa20或chacha20加密，请下载libsodium并将dll文件（无路径）放入"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 如果要使用salsa20或chacha20加密，请下载libsodium并将dll文件（无路径）放入</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-现在去配置服务器设置。你在任意地方建立一个文件，比如叫config-json，然后填入你的服务器配置。比如我想要在8388端口创建一个密码为123456的加密方式为aes-256-cfb的一个服务器，那么这么写："><span class="post-toc-number">6.</span> <span class="post-toc-text">6. 现在去配置服务器设置。你在任意地方建立一个文件，比如叫config.json，然后填入你的服务器配置。比如我想要在8388端口创建一个密码为123456的加密方式为aes-256-cfb的一个服务器，那么这么写：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#然后保存在C-Python27-Scripts-config-json。执行以下命令运行："><span class="post-toc-number">7.</span> <span class="post-toc-text">然后保存在C:\Python27\Scripts\config.json。执行以下命令运行：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#就去OpenSSL的安装目录复制"><span class="post-toc-number">8.</span> <span class="post-toc-text">就去OpenSSL的安装目录复制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#可以看到我的服务已经启动成功了！好了享用Windows下的Shadowsocks服务器吧！"><span class="post-toc-number">9.</span> <span class="post-toc-text">可以看到我的服务已经启动成功了！好了享用Windows下的Shadowsocks服务器吧！</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/13/第二篇/">第二篇</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/13/第二篇/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/photo.jpg" width="44px" height="44px" alt="K's avatar">
-            </div>
-            <div>
-                <strong>K</strong>
-                <span>8月 13, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Web/">Web</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/13/年轻人的第一篇博文/">年轻人的第一篇博文</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/13/年轻人的第一篇博文/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/photo.jpg" width="44px" height="44px" alt="K's avatar">
-            </div>
-            <div>
-                <strong>K</strong>
-                <span>8月 13, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Something/">Something</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                在Windows上安装Shadowsocks服务器
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/photo.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>K</strong>
+        <span>9月 12, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC00lEQVR42u3aUU7DQAwFwN7/0nAAaHi2Ay3ryVeEmmRnI2HZL4+PlccDGxsbGxsbGxsb+y3Zj/io/v7ZtdfnX9f27O/5c7GxsbE3sH/41x+zk/v07pBs07ULGxsbewM7Lzzf3PTyqslvqq8BGxsbG7u6uKRhSMrY9dYkrwEbGxsbu1rAkoflDUlv2ISNjY2N3RzQFMtPPvRPVvWCWRo2Njb227PvDWv/5vwF+TY2Njb2W7LnR7VRmYyxRuvExsbGPpSdj++vx/3V4HY+wMoHTNjY2Ngb2MlN86F/7zdJwctfT1TAsLGxsQ9i39Va9Darh6lGCNjY2Nh72EmbMQkPJjHApJRiY2Nj72Hnw/rJtdWtn38YhI2Njb2HnbcTSYvSO6rxQLRabGxs7EPZeanoDZh6oewkeIjiAWxsbOyD2L0PdHof2czbkmprhI2Njb2BnQ/oJxFCL+LNy2r0RGxsbOxD2Xl7MGlRqiVzHiRjY2Njb2NXG4wkWuhtU17qksgZGxsbew97vvT5SKhaLKslDRsbG/tU9m3D99biJltfDoyxsbGxF7CTi6uhb68oVkPlUQHDxsbG/ufsfHx/19io+rnP5J7Y2NjY29h5w5CUnF6hmscVT18VNjY29qHsXgvR+2iy96lQ/sRCAcPGxsY+iJ20InmcUC4q8XZX42FsbGzsbex8Qb3zaOgz3qxyB4aNjY19EPujeFTbkl6QHJWluAXCxsbG3sCuxqvVQpjje0HyKBXBxsbG/rfsSenqjZDyOHny9ygVwcbGxj6C3fvMcT6K6sXJo6EVNjY29tHsatG63rIeo7rF1cKGjY2NvYF9/fjr83xY/3vjpNviAWxsbOz17HwIVW0tetECNjY2NnYe7uYbVC2BZSQ2Njb2SnYyVMqXno/+e6FvNWbAxsbGPptdHdlUW4vetvYC5kIBw8bGxj6CvefAxsbGxsbGxsbGfpvjE8M9w6ajQjWfAAAAAElFTkSuQmCC">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=在Windows上安装Shadowsocks服务器&url=http://yoursite.com/2017/09/12/在Windows上安装Shadowsocks服务器/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=在Windows上安装Shadowsocks服务器&url=http://yoursite.com/2017/09/12/在Windows上安装Shadowsocks服务器/index.html&via=K" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/09/12/在Windows上安装Shadowsocks服务器/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/09/12/在Windows上安装Shadowsocks服务器/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2017/09/12/在Windows上安装Shadowsocks服务器/index.html&title=在Windows上安装Shadowsocks服务器" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=木木口丁的博客啊&title=在Windows上安装Shadowsocks服务器&summary=年轻人的第一个博客&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/09/12/在Windows上安装Shadowsocks服务器/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <ul>
+<li>PS:<strong>之前写过Ubuntu下的安装方法，<a href="http://www.jianshu.com/p/cc5c35ae7009" target="_blank" rel="external">点击这里</a></strong></li>
+</ul>
+<h3 id="1-下载并安装适用于Windows的Python，您可以在64位Windows中下载x86-64-MSI安装程序。"><a href="#1-下载并安装适用于Windows的Python，您可以在64位Windows中下载x86-64-MSI安装程序。" class="headerlink" title="1. 下载并安装适用于Windows的Python，您可以在64位Windows中下载x86-64 MSI安装程序。"></a>1. 下载并安装适用于Windows的<a href="https://www.python.org/downloads/windows/" target="_blank" rel="external">Python</a>，您可以在64位Windows中下载x86-64 MSI安装程序。</h3><h3 id="2-在安装过程中应该安装-pip"><a href="#2-在安装过程中应该安装-pip" class="headerlink" title="2. 在安装过程中应该安装 pip"></a>2. 在安装过程中应该安装 <em>pip</em></h3><p><img src="http://upload-images.jianshu.io/upload_images/3235837-54ac4e912c84ef6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="3-安装Windows的OpenSSL。如果你安装64位Python，你应该安装64位OpenSSL。"><a href="#3-安装Windows的OpenSSL。如果你安装64位Python，你应该安装64位OpenSSL。" class="headerlink" title="3. 安装Windows的OpenSSL。如果你安装64位Python，你应该安装64位OpenSSL。"></a>3. 安装Windows的<a href="https://slproweb.com/products/Win32OpenSSL.html" target="_blank" rel="external">OpenSSL</a>。如果你安装64位Python，你应该安装64位OpenSSL。</h3><h4 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h4><ul>
+<li><strong>下载非<em>    Light v1.0.2   </em>版，也就是开发人员版本</strong></li>
+<li><strong>OpenSSL 需要 Visual C++ 2008 Redistributables 支持，<a href="http://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF" target="_blank" rel="external">32位系统点我</a> | <a href="http://www.microsoft.com/downloads/details.aspx?familyid=bd2a6171-e2d6-4230-b809-9a8d7548c1b6" target="_blank" rel="external">64位系统点我</a></strong></li>
+</ul>
+<h3 id="4-接下来就是像使用Linux一样安装Shadowsocks服务端啦！使用这段命令："><a href="#4-接下来就是像使用Linux一样安装Shadowsocks服务端啦！使用这段命令：" class="headerlink" title="4. 接下来就是像使用Linux一样安装Shadowsocks服务端啦！使用这段命令："></a>4. 接下来就是像使用Linux一样安装Shadowsocks服务端啦！使用这段命令：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install shadowsocks</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/3235837-650d94352b48a955.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="5-如果要使用salsa20或chacha20加密，请下载libsodium并将dll文件（无路径）放入"><a href="#5-如果要使用salsa20或chacha20加密，请下载libsodium并将dll文件（无路径）放入" class="headerlink" title="5. 如果要使用salsa20或chacha20加密，请下载libsodium并将dll文件（无路径）放入"></a>5. 如果要使用salsa20或chacha20加密，请下载<a href="http://download.libsodium.org/libsodium/releases/" target="_blank" rel="external">libsodium</a>并将dll文件（无路径）放入</h3><p><strong><code>C:\Windows\System32或C:\Windows\SysWOW64（64位Windows上的32位Python）。</code></strong></p>
+<h3 id="6-现在去配置服务器设置。你在任意地方建立一个文件，比如叫config-json，然后填入你的服务器配置。比如我想要在8388端口创建一个密码为123456的加密方式为aes-256-cfb的一个服务器，那么这么写："><a href="#6-现在去配置服务器设置。你在任意地方建立一个文件，比如叫config-json，然后填入你的服务器配置。比如我想要在8388端口创建一个密码为123456的加密方式为aes-256-cfb的一个服务器，那么这么写：" class="headerlink" title="6. 现在去配置服务器设置。你在任意地方建立一个文件，比如叫config.json，然后填入你的服务器配置。比如我想要在8388端口创建一个密码为123456的加密方式为aes-256-cfb的一个服务器，那么这么写："></a>6. 现在去配置服务器设置。你在任意地方建立一个文件，比如叫config.json，然后填入你的服务器配置。比如我想要在8388端口创建一个密码为123456的加密方式为aes-256-cfb的一个服务器，那么这么写：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</div><div class="line">    &quot;server_port&quot;:8388,</div><div class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;password&quot;:&quot;123456&quot;,</div><div class="line">    &quot;timeout&quot;:300,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">    &quot;fast_open&quot;:false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="然后保存在C-Python27-Scripts-config-json。执行以下命令运行："><a href="#然后保存在C-Python27-Scripts-config-json。执行以下命令运行：" class="headerlink" title="然后保存在C:\Python27\Scripts\config.json。执行以下命令运行："></a>然后保存在C:\Python27\Scripts\config.json。执行以下命令运行：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssserver -c C:\Python27\Scripts\config.json</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>如果它报错</strong><br>Exception: libcrypto(OpenSSL) not found</p>
+</blockquote>
+<h3 id="就去OpenSSL的安装目录复制"><a href="#就去OpenSSL的安装目录复制" class="headerlink" title="就去OpenSSL的安装目录复制"></a>就去OpenSSL的安装目录复制</h3><p><strong><em>libeay32.dll, libssl32.dll, ssleay32.dll到C:\Python27\Scripts\ </em></strong><br><strong>注：OpenSSL v1.02才有以上三个文件</strong></p>
+<h3 id="可以看到我的服务已经启动成功了！好了享用Windows下的Shadowsocks服务器吧！"><a href="#可以看到我的服务已经启动成功了！好了享用Windows下的Shadowsocks服务器吧！" class="headerlink" title="可以看到我的服务已经启动成功了！好了享用Windows下的Shadowsocks服务器吧！"></a>可以看到我的服务已经启动成功了！好了享用Windows下的Shadowsocks服务器吧！</h3><p><img src="http://upload-images.jianshu.io/upload_images/3235837-3da4f7cfffa7c366.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/01/09/自动选课脚本/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/09/01/学习分享/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

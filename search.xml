@@ -3,6 +3,107 @@
   
     
     <entry>
+      <title><![CDATA[自动选课脚本]]></title>
+      <url>/2018/01/09/%E8%87%AA%E5%8A%A8%E9%80%89%E8%AF%BE%E8%84%9A%E6%9C%AC/</url>
+      <content type="html"><![CDATA[<blockquote>
+<h3 id="ReadMe"><a href="#ReadMe" class="headerlink" title="ReadMe :"></a>ReadMe :</h3><p>想上的课选不上很扎心，于是就整了个骚操作。<br>代码很简单，就懒得打注释了。<br>因为选课系统样式是用<a href="http://www.bootcss.com/" target="_blank" rel="external">Bootstrap</a>框架写的，引入了<a href="http://jquery.com/" target="_blank" rel="external">jQuery</a>，所以直接用$的id选择器查找到选课按钮即可，然后一个定时器+逻辑判断。<br>代码仅供学习交流，谢绝非法用途。<br><strong>使用说明：浏览器（最好是谷歌、火狐、欧朋）打开<a href="http://jxglstu.hfut.edu.cn/eams5-student/home" target="_blank" rel="external">学生选课系统</a>，切换到选课页面，找到你要选的课，然后键盘Ctrl+Shift+C，这时鼠标可以选取网页上的元素，点击你要选的课的按钮，在调试区找到课程的data-id，复制出来，使用下面的代码在Cosole（控制台）执行，代码第一行的data-id记得换成你自己的啊！做完这些就慢慢等吧，一旦有人退课你就很大概率能选上了。定时器时间间隔是1200毫秒，可以自己改。</strong></p>
+</blockquote>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code :"></a>Code :</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var button = $(&quot;button[data-id=&apos;253296&apos;]&quot;);</div><div class="line">var i = 1;</div><div class="line">var select = setInterval(function() &#123;</div><div class="line">truebutton.click();</div><div class="line">trueif(($(&quot;.result-content&quot;).text() == &quot;选课成功&quot;) || ($(&quot;.result-content&quot;).text() == &quot;相同教学班只能选一次&quot;)) &#123;</div><div class="line">truetruewindow.clearInterval(select);</div><div class="line">truetrueconsole.log(&quot;选课成功！&quot;);</div><div class="line">true&#125; else &#123;</div><div class="line">truetrueconsole.log(&quot;第 &quot; + i + &quot; 次选课失败&quot;);</div><div class="line">truetruei++;</div><div class="line">true&#125;</div><div class="line">&#125;,1200);</div><div class="line"></div><div class="line"></div><div class="line">// ES6</div><div class="line">const button = $(&quot;button[data-id=&apos;253296&apos;]&quot;);</div><div class="line">let i = 1;</div><div class="line">const select = setInterval(() =&gt; &#123;</div><div class="line">    button.click();</div><div class="line">    if(($(&quot;.result-content&quot;).text() == &quot;选课成功&quot;) || ($(&quot;.result-content&quot;).text() == &quot;相同教学班只能选一次&quot;)) &#123;</div><div class="line">        window.clearInterval(select);</div><div class="line">        console.log(&quot;选课成功！&quot;);</div><div class="line">    &#125; else &#123;</div><div class="line">        console.log(&quot;第 &quot; + i + &quot; 次选课失败&quot;);</div><div class="line">        i++;</div><div class="line">    &#125;</div><div class="line">&#125;,1200);</div></pre></td></tr></table></figure>
+<h3 id="配图："><a href="#配图：" class="headerlink" title="配图："></a>配图：</h3><p><img src="http://upload-images.jianshu.io/upload_images/3235837-6e167a1a1bc2f33a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="选课页面"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3235837-b44d10f328f7af1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="自动选课"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Web </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[在Windows上安装Shadowsocks服务器]]></title>
+      <url>/2017/09/12/%E5%9C%A8Windows%E4%B8%8A%E5%AE%89%E8%A3%85Shadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+      <content type="html"><![CDATA[<ul>
+<li>PS:<strong>之前写过Ubuntu下的安装方法，<a href="http://www.jianshu.com/p/cc5c35ae7009" target="_blank" rel="external">点击这里</a></strong></li>
+</ul>
+<h3 id="1-下载并安装适用于Windows的Python，您可以在64位Windows中下载x86-64-MSI安装程序。"><a href="#1-下载并安装适用于Windows的Python，您可以在64位Windows中下载x86-64-MSI安装程序。" class="headerlink" title="1. 下载并安装适用于Windows的Python，您可以在64位Windows中下载x86-64 MSI安装程序。"></a>1. 下载并安装适用于Windows的<a href="https://www.python.org/downloads/windows/" target="_blank" rel="external">Python</a>，您可以在64位Windows中下载x86-64 MSI安装程序。</h3><h3 id="2-在安装过程中应该安装-pip"><a href="#2-在安装过程中应该安装-pip" class="headerlink" title="2. 在安装过程中应该安装 pip"></a>2. 在安装过程中应该安装 <em>pip</em></h3><p><img src="http://upload-images.jianshu.io/upload_images/3235837-54ac4e912c84ef6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="3-安装Windows的OpenSSL。如果你安装64位Python，你应该安装64位OpenSSL。"><a href="#3-安装Windows的OpenSSL。如果你安装64位Python，你应该安装64位OpenSSL。" class="headerlink" title="3. 安装Windows的OpenSSL。如果你安装64位Python，你应该安装64位OpenSSL。"></a>3. 安装Windows的<a href="https://slproweb.com/products/Win32OpenSSL.html" target="_blank" rel="external">OpenSSL</a>。如果你安装64位Python，你应该安装64位OpenSSL。</h3><h4 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h4><ul>
+<li><strong>下载非<em>    Light v1.0.2   </em>版，也就是开发人员版本</strong></li>
+<li><strong>OpenSSL 需要 Visual C++ 2008 Redistributables 支持，<a href="http://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF" target="_blank" rel="external">32位系统点我</a> | <a href="http://www.microsoft.com/downloads/details.aspx?familyid=bd2a6171-e2d6-4230-b809-9a8d7548c1b6" target="_blank" rel="external">64位系统点我</a></strong></li>
+</ul>
+<h3 id="4-接下来就是像使用Linux一样安装Shadowsocks服务端啦！使用这段命令："><a href="#4-接下来就是像使用Linux一样安装Shadowsocks服务端啦！使用这段命令：" class="headerlink" title="4. 接下来就是像使用Linux一样安装Shadowsocks服务端啦！使用这段命令："></a>4. 接下来就是像使用Linux一样安装Shadowsocks服务端啦！使用这段命令：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install shadowsocks</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/3235837-650d94352b48a955.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="5-如果要使用salsa20或chacha20加密，请下载libsodium并将dll文件（无路径）放入"><a href="#5-如果要使用salsa20或chacha20加密，请下载libsodium并将dll文件（无路径）放入" class="headerlink" title="5. 如果要使用salsa20或chacha20加密，请下载libsodium并将dll文件（无路径）放入"></a>5. 如果要使用salsa20或chacha20加密，请下载<a href="http://download.libsodium.org/libsodium/releases/" target="_blank" rel="external">libsodium</a>并将dll文件（无路径）放入</h3><p><strong><code>C:\Windows\System32或C:\Windows\SysWOW64（64位Windows上的32位Python）。</code></strong></p>
+<h3 id="6-现在去配置服务器设置。你在任意地方建立一个文件，比如叫config-json，然后填入你的服务器配置。比如我想要在8388端口创建一个密码为123456的加密方式为aes-256-cfb的一个服务器，那么这么写："><a href="#6-现在去配置服务器设置。你在任意地方建立一个文件，比如叫config-json，然后填入你的服务器配置。比如我想要在8388端口创建一个密码为123456的加密方式为aes-256-cfb的一个服务器，那么这么写：" class="headerlink" title="6. 现在去配置服务器设置。你在任意地方建立一个文件，比如叫config.json，然后填入你的服务器配置。比如我想要在8388端口创建一个密码为123456的加密方式为aes-256-cfb的一个服务器，那么这么写："></a>6. 现在去配置服务器设置。你在任意地方建立一个文件，比如叫config.json，然后填入你的服务器配置。比如我想要在8388端口创建一个密码为123456的加密方式为aes-256-cfb的一个服务器，那么这么写：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</div><div class="line">    &quot;server_port&quot;:8388,</div><div class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;password&quot;:&quot;123456&quot;,</div><div class="line">    &quot;timeout&quot;:300,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">    &quot;fast_open&quot;:false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="然后保存在C-Python27-Scripts-config-json。执行以下命令运行："><a href="#然后保存在C-Python27-Scripts-config-json。执行以下命令运行：" class="headerlink" title="然后保存在C:\Python27\Scripts\config.json。执行以下命令运行："></a>然后保存在C:\Python27\Scripts\config.json。执行以下命令运行：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssserver -c C:\Python27\Scripts\config.json</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>如果它报错</strong><br>Exception: libcrypto(OpenSSL) not found</p>
+</blockquote>
+<h3 id="就去OpenSSL的安装目录复制"><a href="#就去OpenSSL的安装目录复制" class="headerlink" title="就去OpenSSL的安装目录复制"></a>就去OpenSSL的安装目录复制</h3><p><strong><em>libeay32.dll, libssl32.dll, ssleay32.dll到C:\Python27\Scripts\ </em></strong><br><strong>注：OpenSSL v1.02才有以上三个文件</strong></p>
+<h3 id="可以看到我的服务已经启动成功了！好了享用Windows下的Shadowsocks服务器吧！"><a href="#可以看到我的服务已经启动成功了！好了享用Windows下的Shadowsocks服务器吧！" class="headerlink" title="可以看到我的服务已经启动成功了！好了享用Windows下的Shadowsocks服务器吧！"></a>可以看到我的服务已经启动成功了！好了享用Windows下的Shadowsocks服务器吧！</h3><p><img src="http://upload-images.jianshu.io/upload_images/3235837-3da4f7cfffa7c366.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Web </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[学习分享]]></title>
+      <url>/2017/09/01/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/</url>
+      <content type="html"><![CDATA[<p>算是一些建议吧</p>
+<h3 id="一、学习习惯篇"><a href="#一、学习习惯篇" class="headerlink" title="一、学习习惯篇"></a>一、学习习惯篇</h3><blockquote>
+<p>工欲善其事，必先利其器。</p>
+</blockquote>
+<ul>
+<li>课堂上的准备：书，笔，<strong>笔记本</strong>，<strong>草稿纸</strong>，手机</li>
+<li>写作业：做好草稿（写清楚，细致）</li>
+</ul>
+<h3 id="二、学习方法篇"><a href="#二、学习方法篇" class="headerlink" title="二、学习方法篇"></a>二、学习方法篇</h3><blockquote>
+<p>纸上得来终觉浅，绝知此事要躬行。</p>
+</blockquote>
+<ul>
+<li>有时间就预习</li>
+<li>课后总结</li>
+<li>独立完成作业，尽早完成</li>
+<li>课后题尽量写</li>
+<li>考前刷卷子</li>
+</ul>
+<h3 id="三、学习工具（资源）篇"><a href="#三、学习工具（资源）篇" class="headerlink" title="三、学习工具（资源）篇"></a>三、学习工具（资源）篇</h3><blockquote>
+<p>吾生也有涯，而知也无涯。</p>
+</blockquote>
+<ul>
+<li><a href="http://www.icourse163.org/" target="_blank" rel="external">中国慕课MOOC</a></li>
+<li><a href="http://www.icourses.cn/home/" target="_blank" rel="external">爱课程</a></li>
+<li><a href="https://ke.qq.com/" target="_blank" rel="external">腾讯课堂</a></li>
+<li><a href="https://www.yinxiang.com/" target="_blank" rel="external">印象笔记Evernote</a></li>
+<li><a href="http://www.camscanner.com/rf?358363949" target="_blank" rel="external">扫描全能王</a></li>
+<li>善用搜索引擎，能Google尽量不用百度</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Something </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[第二篇]]></title>
       <url>/2017/08/13/%E7%AC%AC%E4%BA%8C%E7%AF%87/</url>
       <content type="html"><![CDATA[<h3 id="全局对象的属性是全局定义的符号，JavaScript程序可以直接使用。当JavaScript解释器启动时（或者任何Web浏览器加载新页面的时候），它将创建一个新的全局对像，并给它一组定义的初始属性："><a href="#全局对象的属性是全局定义的符号，JavaScript程序可以直接使用。当JavaScript解释器启动时（或者任何Web浏览器加载新页面的时候），它将创建一个新的全局对像，并给它一组定义的初始属性：" class="headerlink" title="全局对象的属性是全局定义的符号，JavaScript程序可以直接使用。当JavaScript解释器启动时（或者任何Web浏览器加载新页面的时候），它将创建一个新的全局对像，并给它一组定义的初始属性："></a>全局对象的属性是全局定义的符号，JavaScript程序可以直接使用。当JavaScript解释器启动时（或者任何Web浏览器加载新页面的时候），它将创建一个新的全局对像，并给它一组定义的初始属性：</h3><ul>
@@ -67,15 +168,15 @@
     </entry>
     
     <entry>
-      <title><![CDATA[关于我]]></title>
-      <url>/about/index.html</url>
-      <content type="html"><![CDATA[<h1 id="木木口丁啊～"><a href="#木木口丁啊～" class="headerlink" title="木木口丁啊～"></a>木木口丁啊～</h1>]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[标签云]]></title>
       <url>/tags/index.html</url>
       <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[关于我]]></title>
+      <url>/about/index.html</url>
+      <content type="html"><![CDATA[<h1 id="木木口丁啊～"><a href="#木木口丁啊～" class="headerlink" title="木木口丁啊～"></a>木木口丁啊～</h1>]]></content>
     </entry>
     
     <entry>

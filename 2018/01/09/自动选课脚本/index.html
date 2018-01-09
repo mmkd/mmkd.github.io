@@ -12,7 +12,7 @@
     
     <title>
         
-            归档: 2017/8 | 
+            自动选课脚本 | 
         
         木木口丁的博客啊
     </title>
@@ -38,7 +38,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="K">
     <meta name="description" itemprop="description" content="年轻人的第一个博客">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",JavaScript">
 
     <!-- Site Verification -->
     
@@ -67,15 +67,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017/8 | 木木口丁的博客啊">
+    <meta property="og:title" content="自动选课脚本 | 木木口丁的博客啊">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="年轻人的第一个博客">
-    
+    <meta property="og:article:tag" content="JavaScript"> 
 
+    
+        <meta property="article:published_time" content="Tue Jan 09 2018 23:23:34 GMT+0800" />
+        <meta property="article:modified_time" content="Tue Jan 09 2018 23:25:24 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="归档: 2017/8 | 木木口丁的博客啊">
+    <meta name="twitter:title" content="自动选课脚本 | 木木口丁的博客啊">
     <meta name="twitter:description" content="年轻人的第一个博客">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -83,13 +86,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2017/08/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/01/09/自动选课脚本/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "木木口丁的博客啊",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "K",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "深自缄默，如云漂泊"
+    },
+    "headline": "自动选课脚本",
+    "url": "http://yoursite.com/2018/01/09/自动选课脚本/index.html",
+    "datePublished": "Tue Jan 09 2018 23:23:34 GMT+0800",
+    "dateModified": "Tue Jan 09 2018 23:25:24 GMT+0800",
+    "description": "年轻人的第一个博客",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com"
+    }
+}
+</script>
 
 
     
@@ -278,155 +311,259 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ReadMe"><span class="post-toc-number">1.</span> <span class="post-toc-text">ReadMe :</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Code"><span class="post-toc-number">2.</span> <span class="post-toc-text">Code :</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配图："><span class="post-toc-number">3.</span> <span class="post-toc-text">配图：</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/13/第二篇/">第二篇</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/13/第二篇/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/photo.jpg" width="44px" height="44px" alt="K's avatar">
-            </div>
-            <div>
-                <strong>K</strong>
-                <span>8月 13, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Web/">Web</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/13/年轻人的第一篇博文/">年轻人的第一篇博文</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/13/年轻人的第一篇博文/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/photo.jpg" width="44px" height="44px" alt="K's avatar">
-            </div>
-            <div>
-                <strong>K</strong>
-                <span>8月 13, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Something/">Something</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                自动选课脚本
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/photo.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>K</strong>
+        <span>1月 09, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACb0lEQVR42u3ay47bMBAEQP//TyfXABs73cPHKovSyZBlk6UDOWjO69ePvl54eHh4eHh4eHgP473i6+vzf9559+1fhn/z/NdftXPDw8PDu8n7x1L7BvNuKsm3CbKdGx4eHt59XjvMbPj2pbRzw8PDw3sa73P5m2wDs1/h4eHh/b+8dopJUd6+Mjw8PLzn8NqyOBosuNM+eTBrwcPDw4t57QHYzc/fcL6Hh4eH95HXXsm02s0j3waiGeLh4eEd5iVBanJ/PYBoy/G66QoPDw9vE28Wrc6Cg5XDsOKl4OHh4R3mzY6mZhOdNRx8/oe6pMbDw8PbykuW4DZmzdltyLt0voeHh4e3wJuVy23kmk+xbWAtUmo8PDy8Tby2RTUJdpNtY3bAlvwPHh4e3h3eyhTrsGBrwY2Hh4d3n9eGs8my3m4DSek8jHHx8PDwDvNWQoH1ojwv2YcbAx4eHt4mXlvIzgBJC8K20fHw8PAO85KSerYNzBoCVj7j4eHh3efNjurb1oE2+Eg2FTw8PLzv4u1ify6F2xCkZePh4eGd5rWtqEnpvBI0rIfFeHh4eKd5s8On5Phq1o6woXkLDw8P7wpvttyvBBa7mg+iAzA8PDy8rbz1VoB8C8kbrWYlOB4eHt4d3nqkm0S9+QudbQZ4eHh4N3nri/LsyGqlSatoHcDDw8M7xlsJDoqBRxFwHl7g4eHh3eetL/dJyLsSZGyIcfHw8PCu81pMsv3kQUMUZ+Dh4eE9krcr0p3FFnWMi4eHh3eMlyzEyZ1Z0DB7ZnPWgoeHh3fsAKwNamdRb/668fDw8G7yft6Fh4eHh4eHh4f3gOs3JZdy3gKoQ9sAAAAASUVORK5CYII=">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=自动选课脚本&url=http://yoursite.com/2018/01/09/自动选课脚本/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=自动选课脚本&url=http://yoursite.com/2018/01/09/自动选课脚本/index.html&via=K" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/09/自动选课脚本/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/09/自动选课脚本/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2018/01/09/自动选课脚本/index.html&title=自动选课脚本" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=木木口丁的博客啊&title=自动选课脚本&summary=年轻人的第一个博客&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/01/09/自动选课脚本/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<h3 id="ReadMe"><a href="#ReadMe" class="headerlink" title="ReadMe :"></a>ReadMe :</h3><p>想上的课选不上很扎心，于是就整了个骚操作。<br>代码很简单，就懒得打注释了。<br>因为选课系统样式是用<a href="http://www.bootcss.com/" target="_blank" rel="external">Bootstrap</a>框架写的，引入了<a href="http://jquery.com/" target="_blank" rel="external">jQuery</a>，所以直接用$的id选择器查找到选课按钮即可，然后一个定时器+逻辑判断。<br>代码仅供学习交流，谢绝非法用途。<br><strong>使用说明：浏览器（最好是谷歌、火狐、欧朋）打开<a href="http://jxglstu.hfut.edu.cn/eams5-student/home" target="_blank" rel="external">学生选课系统</a>，切换到选课页面，找到你要选的课，然后键盘Ctrl+Shift+C，这时鼠标可以选取网页上的元素，点击你要选的课的按钮，在调试区找到课程的data-id，复制出来，使用下面的代码在Cosole（控制台）执行，代码第一行的data-id记得换成你自己的啊！做完这些就慢慢等吧，一旦有人退课你就很大概率能选上了。定时器时间间隔是1200毫秒，可以自己改。</strong></p>
+</blockquote>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code :"></a>Code :</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var button = $(&quot;button[data-id=&apos;253296&apos;]&quot;);</div><div class="line">var i = 1;</div><div class="line">var select = setInterval(function() &#123;</div><div class="line">truebutton.click();</div><div class="line">trueif(($(&quot;.result-content&quot;).text() == &quot;选课成功&quot;) || ($(&quot;.result-content&quot;).text() == &quot;相同教学班只能选一次&quot;)) &#123;</div><div class="line">truetruewindow.clearInterval(select);</div><div class="line">truetrueconsole.log(&quot;选课成功！&quot;);</div><div class="line">true&#125; else &#123;</div><div class="line">truetrueconsole.log(&quot;第 &quot; + i + &quot; 次选课失败&quot;);</div><div class="line">truetruei++;</div><div class="line">true&#125;</div><div class="line">&#125;,1200);</div><div class="line"></div><div class="line"></div><div class="line">// ES6</div><div class="line">const button = $(&quot;button[data-id=&apos;253296&apos;]&quot;);</div><div class="line">let i = 1;</div><div class="line">const select = setInterval(() =&gt; &#123;</div><div class="line">    button.click();</div><div class="line">    if(($(&quot;.result-content&quot;).text() == &quot;选课成功&quot;) || ($(&quot;.result-content&quot;).text() == &quot;相同教学班只能选一次&quot;)) &#123;</div><div class="line">        window.clearInterval(select);</div><div class="line">        console.log(&quot;选课成功！&quot;);</div><div class="line">    &#125; else &#123;</div><div class="line">        console.log(&quot;第 &quot; + i + &quot; 次选课失败&quot;);</div><div class="line">        i++;</div><div class="line">    &#125;</div><div class="line">&#125;,1200);</div></pre></td></tr></table></figure>
+<h3 id="配图："><a href="#配图：" class="headerlink" title="配图："></a>配图：</h3><p><img src="http://upload-images.jianshu.io/upload_images/3235837-6e167a1a1bc2f33a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="选课页面"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3235837-b44d10f328f7af1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="自动选课"></p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/09/12/在Windows上安装Shadowsocks服务器/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
